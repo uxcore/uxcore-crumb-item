@@ -5,7 +5,7 @@ const {BoolSetter, TextSetter, ChoiceSetter, JsonSetter, NumberSetter} = require
 
 module.exports = Bundle.createPrototype({
     title: "面包屑项目",
-    category: "*",
+    category: null,
     icon: require("./logo.svg"), // todo: require("./logo.svg"),
     componentName: "CrumbItem",
     canHovering: false,

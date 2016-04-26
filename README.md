@@ -1,6 +1,6 @@
 ---
 
-## uxcore-crumb-item [![Dependency Status](http://img.shields.io/david/uxcore/uxcore-crumb-item.svg?style=flat-square)](https://david-dm.org/uxcore/uxcore-crumb-item) [![devDependency Status](http://img.shields.io/david/dev/uxcore/uxcore-crumb-item.svg?style=flat-square)](https://david-dm.org/uxcore/uxcore-crumb-item#info=devDependencies) 
+## uxcore-crumb-item [![Dependency Status](http://img.shields.io/david/uxcore/uxcore-crumb-item.svg?style=flat-square)](https://david-dm.org/uxcore/uxcore-crumb-item) [![devDependency Status](http://img.shields.io/david/dev/uxcore/uxcore-crumb-item.svg?style=flat-square)](https://david-dm.org/uxcore/uxcore-crumb-item#info=devDependencies) ![](http://st.onbing.com/?t=support&s=VisualEngine&c=green)
 
 ## TL;DR
 
