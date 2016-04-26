@@ -26,13 +26,28 @@ class CrumbItem extends React.Component {
 }
 
 CrumbItem.defaultProps = {
+  children: '链接'
 }
 
 
 // http://facebook.github.io/react/docs/reusable-components.html
 CrumbItem.propTypes = {
+  /**
+   * @title 链接
+   */
   href: React.PropTypes.string,
-  className: React.PropTypes.string
+  /**
+   * @title 类名
+   * @veIgnore
+   */
+  className: React.PropTypes.string,
+  /**
+   * @title 文案
+   */
+  children: React.PropTypes.oneOfType([
+    React.PropTypes.string,
+    React.PropTypes.element
+  ])
 }
 
 CrumbItem.displayName = 'CrumbItem';
