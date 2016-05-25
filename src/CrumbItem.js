@@ -8,7 +8,6 @@
 
 let classnames = require('classnames');
 let React = require('react');
-let assign = require('object-assign');
 
 class CrumbItem extends React.Component {
 
