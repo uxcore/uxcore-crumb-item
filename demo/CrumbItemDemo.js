@@ -23,10 +23,10 @@ class Demo extends React.Component {
         return (
             <div>
                 <Crumb className="crumb-style crumb-root">
-                    <Crumb.Item href="#" className="crumb-item-style">首页</Crumb.Item>
-                    <Crumb.Item href="#">管理平台</Crumb.Item>
-                    <Crumb.Item href="#">流程管理</Crumb.Item>
-                    <Crumb.Item className="crumb-item-style">编辑流程信息</Crumb.Item>
+                    <CrumbItem href="#" className="crumb-item-style">首页</CrumbItem>
+                    <CrumbItem onClick={alert.bind(window, '管理平台')}>管理平台</CrumbItem>
+                    <CrumbItem href="#">流程管理</CrumbItem>
+                    <CrumbItem className="crumb-item-style">编辑流程信息</CrumbItem>
                 </Crumb>
             </div>
         );

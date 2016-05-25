@@ -7,8 +7,7 @@
  */
 
 let classnames = require('classnames');
-let React = require('react'); 
-let ReactDOM = require('react-dom');
+let React = require('react');
 
 class CrumbItem extends React.Component {
 
@@ -17,11 +16,13 @@ class CrumbItem extends React.Component {
   }
 
   render() {
-    const props = this.props;
-
-    return !props.href ? <span className={classnames({
-        [props.className]: !!props.className
-    })}>{props.children}</span> : <a href={props.href} className={props.className}>{props.children}</a>
+    const {...props} = this.props;
+    if (props.onClick) {
+      props.href = "javascript:void(0);";
+    }
+    return props.href
+      ? <a {...props}>{props.children}</a>
+      : <span {...props}>{props.children}</span>;
   }
 }
 
@@ -47,8 +48,12 @@ CrumbItem.propTypes = {
   children: React.PropTypes.oneOfType([
     React.PropTypes.string,
     React.PropTypes.element
-  ])
-}
+  ]),
+  /**
+   * @title 点击事件
+   */
+  onClick: React.PropTypes.func
+};
 
 CrumbItem.displayName = 'CrumbItem';
 
