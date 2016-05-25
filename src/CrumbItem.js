@@ -21,15 +21,21 @@ class CrumbItem extends React.Component {
     if (props.onClick || props.href) {
       onClick = (e) => {
         e.preventDefault();
-        props.onClick && props.onClick();
-        props.href && (location.href = props.href);
+        if (props.onClick) {
+          props.onClick(e);
+        } else {
+          location.href = props.href
+        }
       };
     }
-    return React.createElement(onClick ? 'a' : 'span', {
-      onClick: onClick,
+    let _props = {
       className: props.className,
+      onClick: onClick,
       href: onClick ? '#' : null
-    }, props.children);
+    };
+    return onClick
+      ? <a {..._props}>{props.children}</a>
+      : <span {..._props}>{props.children}</span>;
   }
 }
 
@@ -60,7 +66,7 @@ CrumbItem.propTypes = {
    * @title 点击事件
    */
   onClick: React.PropTypes.func
-}
+};
 
 CrumbItem.displayName = 'CrumbItem';
 
