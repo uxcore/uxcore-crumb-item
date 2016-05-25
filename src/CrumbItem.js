@@ -8,6 +8,7 @@
 
 let classnames = require('classnames');
 let React = require('react');
+let assign = require('object-assign');
 
 class CrumbItem extends React.Component {
 
@@ -16,26 +17,13 @@ class CrumbItem extends React.Component {
   }
 
   render() {
-    const props = this.props;
-    let onClick = null;
-    if (props.onClick || props.href) {
-      onClick = (e) => {
-        e.preventDefault();
-        if (props.onClick) {
-          props.onClick(e);
-        } else {
-          location.href = props.href
-        }
-      };
+    const {...props} = this.props;
+    if (props.onClick) {
+      props.href = "javascript:void(0);";
     }
-    let _props = {
-      className: props.className,
-      onClick: onClick,
-      href: onClick ? '#' : null
-    };
-    return onClick
-      ? <a {..._props}>{props.children}</a>
-      : <span {..._props}>{props.children}</span>;
+    return props.href
+      ? <a {...props}>{props.children}</a>
+      : <span {...props}>{props.children}</span>;
   }
 }
 
