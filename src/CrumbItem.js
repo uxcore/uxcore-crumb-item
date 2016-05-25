@@ -51,6 +51,7 @@ CrumbItem.propTypes = {
   ]),
   /**
    * @title 点击事件
+   * @veIgnore
    */
   onClick: React.PropTypes.func
 };
